@@ -1,1 +1,117 @@
-home
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Learning Augmented Biology (LAB) lab</title>
+  <!-- 引入未来感字体 -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    /* 基本重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #2c3e50, #0f2027);
+      color: #e0e0e0;
+      min-height: 100vh;
+      padding-bottom: 60px; /* 为固定底部留出空间 */
+    }
+    header {
+      background: linear-gradient(45deg, #00f5c4, #00d9f5);
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* logo 样式 */
+    .logo {
+      margin-bottom: 10px;
+    }
+    .logo svg {
+      width: 100px;
+      height: auto;
+      /* 增加阴影效果使 logo 更加突出 */
+      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #000;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      backdrop-filter: blur(5px);
+      /* 霓虹边框动画 */
+      animation: neon 3s ease-in-out infinite;
+    }
+    main p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(45deg, #00f5c4, #00d9f5);
+      color: #000;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    }
+    /* 定义霓虹边框动画 */
+    @keyframes neon {
+      0%, 100% {
+        border-color: #00f5c4;
+      }
+      50% {
+        border-color: #00d9f5;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Logo 区域 -->
+    <div class="logo">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+        <defs>
+          <!-- 定义渐变色，用于圆形边框 -->
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#00f5c4; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00d9f5; stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <!-- 外圈圆形，保持霓虹效果 -->
+        <circle cx="100" cy="100" r="90" fill="none" stroke="url(#grad1)" stroke-width="5" />
+        <!-- 居中的文字，颜色改为纯白 -->
+        <text x="50%" y="55%" fill="#fff" font-family="Orbitron, sans-serif" font-size="50" text-anchor="middle" alignment-baseline="middle">
+          LAB
+        </text>
+      </svg>
+    </div>
+    <h1>The Learning Augmented Biology (LAB) lab</h1>
+  </header>
+  
+  <main>
+    <p>The focus of the LAB is to develop and leverage the latest AI technologies for neuroscience research.</p>
+    <p>More details are to be added.</p>
+  </main>
+  
+  <footer>
+    &copy; 2025 The Learning Augmented Biology (LAB) lab. All rights reserved.
+  </footer>
+</body>
+</html>
