@@ -1,118 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Learning Augmented Biology (LAB) lab</title>
-  <!-- 引入未来感字体 -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <style>
-    /* 基本重置 */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #2c3e50, #0f2027);
-      color: #e0e0e0;
-      min-height: 100vh;
-      padding-bottom: 60px; /* 为固定底部留出空间 */
-    }
-    header {
-      background: linear-gradient(45deg, #00f5c4, #00d9f5);
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    /* logo 样式 */
-    .logo {
-      margin-bottom: 10px;
-    }
-    .logo svg {
-      width: 100px;
-      height: auto;
-      /* 增加阴影效果使 logo 更加突出 */
-      filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
-    }
-    header h1 {
-      font-size: 2rem;
-      color: #000;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      backdrop-filter: blur(5px);
-      /* 霓虹边框动画 */
-      animation: neon 3s ease-in-out infinite;
-    }
-    main p {
-      margin-bottom: 20px;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: linear-gradient(45deg, #00f5c4, #00d9f5);
-      color: #000;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
-    }
-    /* 定义霓虹边框动画 */
-    @keyframes neon {
-      0%, 100% {
-        border-color: #00f5c4;
-      }
-      50% {
-        border-color: #00d9f5;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>METhODS Lab | metlab.site</title>
+    <style>
+        /* —— simple, sober academic palette —— */
+        :root {
+            --blue: #173d6c;
+            --gray: #555;
+            --light: #f7f9fc;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--light);
+            color: #111;
+            line-height: 1.55;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 1.3rem 2rem;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header img {
+            height: 70px;
+            margin-right: 1rem;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: var(--blue);
+            margin: 0;
+        }
+
+        nav a {
+            margin-left: 1.2rem;
+            color: var(--gray);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--blue);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--blue);
+            margin-bottom: .4rem;
+        }
+
+        ul {
+            margin-top: .3rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: .9rem;
+            color: var(--gray);
+            padding: 1.5rem 0;
+            border-top: 1px solid #ddd;
+            background: #fff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: .45rem .9rem;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: .95rem;
+            margin-top: .6rem;
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <!-- Logo 区域 -->
-    <div class="logo">
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-        <defs>
-          <!-- 定义渐变色，用于圆形边框 -->
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#00f5c4; stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#00d9f5; stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <!-- 外圈圆形，保持霓虹效果 -->
-        <circle cx="100" cy="100" r="90" fill="none" stroke="url(#grad1)" stroke-width="5" />
-        <!-- 居中的文字，颜色改为纯白 -->
-        <text x="50%" y="55%" fill="#fff" font-family="Orbitron, sans-serif" font-size="50" text-anchor="middle" alignment-baseline="middle">
-          LAB
-        </text>
-      </svg>
-    </div>
-    <h1>The Learning Augmented Biology (LAB) lab</h1>
-  </header>
-  
-  <main>
-    <p>The focus of the LAB is to develop and leverage latest AI technologies for neuroscience research.</p>
-    <p>More details are to be added.</p>
-    <p><a href="https://mp.weixin.qq.com/s/aoswZXecaVd9p5XBVnJv7Q" style="color: #FFEB3B; text-decoration: none; font-weight: bold;">new! 博士后招聘</a> </p> 
-  </main>
-  
-  <footer>
-    &copy; 2025 The Learning Augmented Biology (LAB) lab. All rights reserved.
-  </footer>
+
+    <header>
+        <!-- logo -->
+        <img src="logo.png" alt="METhODS Lab logo">
+        <div>
+            <h1>METhODS Lab</h1>
+            <div style="color:var(--gray);font-size:1rem;">
+                Modeling, Emulation, and Theory for Omics, Dynamics, and Systems
+            </div>
+        </div>
+        <!-- simple nav -->
+        <nav style="margin-left:auto;">
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#people">People</a>
+            <a href="#openings">Openings</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="research">
+            <h2>Research Directions</h2>
+            <p>这里是广东省智能科学与技术研究院METhODS Lab的主页。</p>
+            <p>课题组开展AI4Science研究，使用AI/CV/CG技术解决脑科学及生命科学领域的关键问题，如神经科学大模型、智能体、三维显微图像计算、神经科学数据深度表征、神经元三维结构预测与生成、智能可视平台等。具体研究方向包括：</p>
+            <ul>
+                <li>神经科学大模型开发与应用</li>
+                <li>智能体在科研场景中的应用</li>
+                <li>三维显微图像计算与神经元形态自动重建</li>
+                <li>神经科学数据深度表征</li>
+                <li>智能可视化平台与交互式分析</li>
+                <li>etc.</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <p><em>(Refer to <a href="https://scholar.google.com/citations?user=MNuQBkMAAAAJ" target="_blank">Google Scholar</a>)</em></p>
+
+        </section>
+
+        <section id="people">
+            <h2>Lab Members</h2>
+            <p><em>(Refer to <a href="https://gdiist.cn/research/team_detail/12" target="_blank">研究院页面</a>)</em></p>
+        </section>
+
+        <section id="openings">
+            <h2>Open Positions</h2>
+            <p>We are always looking for motivated researchers with backgrounds in machine learning, computational neuroscience, computer vision, computer graphics, VR/AR, etc.</p>
+            <p>
+                • Postdocs: <a href="https://mp.weixin.qq.com/s/aoswZXecaVd9p5XBVnJv7Q" style="color: #FEAB3B; text-decoration: none; font-weight: bold;">new! 博士后招聘</a><br>
+                • Ph.D. students<br>
+                • Interns: <a href="https://mp.weixin.qq.com/s/_73suTIj3CQDI38Dw6tQKw" style="color: #FEAB3B; text-decoration: none; font-weight: bold;">实习生招聘</a>
+            </p>
+            <a class="btn" href="mailto:ywang@@gdiist.cn?subject=Joining%20METhODS%20Lab">Apply&nbsp;now</a>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>METhODS Lab<br>
+                Guangdong Institute of Intelligence Science and Technology</p>
+            <p>Email: ywang@@gdiist.cn<br>
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2025 METhODS Lab • Made with curiosity and open science • Last updated: 16 Jul 2025
+    </footer>
+
 </body>
+
 </html>
